@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	about.html - Updated December 2022
+	Copyright (c) 2023, The Intermission Orchestra at UC San Diego.
 -->
 <html>
 
@@ -69,6 +69,14 @@
 
         </div>
 
+        <!--Dark mode toggle-->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" onclick="darkMode()"/>
+                <div class="slider round"></div>
+            </label>
+        </div>
+
         <!-- Main -->
         <div class="wrapper style1">
 
@@ -83,8 +91,8 @@
                     <p>
                         We're a student-run organization dedicated to playing music from video games, anime, and films.
                         We arrange, play, conduct, coordinate rehearsals, record our performances — our student power
-                        runs practically everything required to manage an orchestra. Currently, we're a ninety-member
-                        symphonic orchestra and choir. We have concerts three times a year, at the end of each quarter,
+                        runs practically everything required to manage an orchestra. We have concerts three times a
+                        year, at the end of each quarter,
                         and perform at events such as the Triton Gaming Expo, Winter GameFest, and Animefest. But, we
                         didn't start off like this. It's certainly been some work to get our toddler-age orchestra to
                         where we are now. <br \><br \>
@@ -99,6 +107,9 @@
                             </div>
                             <div class="mySlides fade">
                                 <img src="images/about-concertFA17.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="images/about-concertSP18.jpg" style="width:100%">
                             </div>
                             <div class="mySlides fade">
                                 <img src="images/about-concertFA18.jpg" style="width:100%">
@@ -120,6 +131,7 @@
                             <span class="dot" onclick="currentSlide(4)"></span>
                             <span class="dot" onclick="currentSlide(5)"></span>
                             <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
                         </div>
 
                         <footer>
@@ -169,7 +181,7 @@
                         </p>
                     </section>
                 </article>
- 
+
             </div>
 
         </div>
@@ -177,7 +189,7 @@
         <!-- Footer -->
         <div id="footer">
             <div class="container">
-                
+
                 <div class="row">
                     <div class="col-12">
 
@@ -206,9 +218,11 @@
 
                         <!-- Copyright -->
                         <div class="copyright">
-                            <ul class="menu">
-                                <li>&copy; 2022 The Intermission Orchestra at UCSD.</li>
-                            </ul>
+                            &copy;
+                            <span id="copyright-year">
+                                <script>document.getElementById('copyright-year').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                            </span>
+                            The Intermission Orchestra at UC San Diego.
                         </div>
 
                     </div>

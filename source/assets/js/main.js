@@ -1,5 +1,5 @@
 /*
-	main.js - not updated
+	main.js
 */
 
 (function ($) {
@@ -218,4 +218,12 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " dactive";
+}
+
+/* toggle dark mode */
+function darkMode() {
+  var elements = document.getElementsByClassName("wrapper");
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.toggle("dark-mode");
+  }
 }

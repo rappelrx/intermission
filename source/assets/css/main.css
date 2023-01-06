@@ -2087,7 +2087,6 @@ form input[type="email"],
 form input[type="password"],
 form select,
 form textarea {
-  -webkit-appearance: none;
   display: block;
   border: 0;
   background: #fafafa;
@@ -2295,7 +2294,7 @@ header .icon.circled {
 /* STYLES: Wrapper */
 
 .wrapper {
-  background: #fff;
+  background: #ffffff;
   margin: 0 0 2em 0;
   padding: 4em 5em 6em 5em;
 }
@@ -2729,7 +2728,6 @@ body.homepage.is-preload #header:after {
   -o-transition: background-color 0.35s ease-in-out;
   -ms-transition: background-color 0.35s ease-in-out;
   transition: background-color 0.35s ease-in-out;
-  -webkit-backface-visibility: hidden;
 }
 
 .carousel .forward:after,
@@ -2976,7 +2974,7 @@ body.homepage.is-preload #header:after {
 
 @-webkit-keyframes fade {
   from {
-    opacity: 1;
+    opacity: 0.8;
   }
   to {
     opacity: 1;
@@ -2985,7 +2983,7 @@ body.homepage.is-preload #header:after {
 
 @keyframes fade {
   from {
-    opacity: 1;
+    opacity: 0.8;
   }
   to {
     opacity: 1;
@@ -3529,4 +3527,67 @@ body.homepage.is-preload #header:after {
   .carousel article .image {
     margin-bottom: 2em;
   }
+}
+
+/* STYLES: dark mode toggle */
+
+.theme-switch-wrapper {  
+  display: flex;  
+  float: right;  
+  align-items: center;  
+  position: absolute;  
+  right: 10px; 
+  padding-top: 10px; 
+}
+.theme-switch {  
+  display: inline-block;  
+  height: 34px;  
+  position: relative;  
+  width: 60px;
+}
+ 
+.theme-switch input {  
+  display: none;
+} 
+.slider {  
+  background-color: #ccc;  
+  bottom: 0;  
+  cursor: pointer;  
+  left: 0;  
+  position: absolute;  
+  right: 0;  
+  top: 0;  
+  transition: .4s;
+} 
+.slider:before {  
+  background-color: #fff;  
+  bottom: 4px;  
+  content: "";  
+  height: 26px;  
+  left: 4px;  
+  position: absolute;  
+  transition: .4s;  
+  width: 26px;
+} 
+input:checked + .slider {  
+  background-color: #28acea;
+} 
+input:checked + .slider:before {  
+  transform: translateX(26px);
+} 
+.slider.round {  
+  border-radius: 34px;
+} 
+.slider.round:before {  
+  border-radius: 50%;
+}
+
+.dark-mode {
+  background-color: #2b252c;
+  color: white;
+}
+
+.dark-mode h2,
+.dark-mode h3 {
+  color: rgba(172, 158, 158, 0.83);
 }

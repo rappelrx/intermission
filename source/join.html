@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	join.html - Updated December 2022
+	Copyright (c) 2023, The Intermission Orchestra at UC San Diego.
 -->
 <html>
 
@@ -177,9 +177,11 @@
 
                         <!-- Copyright -->
                         <div class="copyright">
-                            <ul class="menu">
-                                <li>&copy; 2022 The Intermission Orchestra at UCSD.</li>
-                            </ul>
+                            &copy;
+                            <span id="copyright-year">
+                                <script>document.getElementById('copyright-year').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                            </span>
+                            The Intermission Orchestra at UC San Diego.
                         </div>
 
                     </div>
