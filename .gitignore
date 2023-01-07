@@ -40,4 +40,3 @@ public
 sftp-config.json
 
 # Additional files to ignore
-./source/assets/js/joined_function.js
