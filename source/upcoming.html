@@ -57,11 +57,21 @@
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
+        </div> <!-- End of Header -->
 
+        <!--Dark mode toggle-->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <img src="./images/moon-icon.png" alt="You are using dark mode" style="width: 26px; padding: 5px 0 0 1px;" />
+                    <img src="./images/sun-icon.png" alt="You are using light mode" style="width: 26px" />
+                </div>
+            </label>
         </div>
 
         <!-- Main -->
-        <div class="wrapper style2">
+        <div class="wrapper style2 lightEdition darkEdition" id="dark-mode-toggle">
 
             <div class="container">
                 <article id="main" class="special">
@@ -109,7 +119,7 @@
                             Keep in time — add our events schedule to your calendar! Don't miss a beat.
                         </p>
                         <a href="https://calendar.google.com/calendar/embed?src=2gdm6mad3bvne24gba36als0kc%40group.calendar.google.com&ctz=America%2FLos_Angeles"
-                            class="button">Calendar Link</a>
+                            target="_blank" class="button">Calendar Link</a>
 
                     </footer>
                 </article>
@@ -173,6 +183,30 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            var dragTheme = window.localStorage.getItem('checkbox');
+            if (dragTheme === "false" || dragTheme === null) {
+                $("#dark-mode-toggle").removeClass("darkEdition");
+                window.localStorage.setItem('checkbox', false);
+                $('#checkbox').prop('checked', false);
+            }
+            else if (dragTheme === "true") {
+                window.localStorage.setItem('checkbox', true);
+                $('#checkbox').prop('checked', true);
+            }
+            $("#checkbox").click(function () {
+                if ($('#checkbox').prop("checked")) {
+                    $("#dark-mode-toggle").addClass("darkEdition");
+                    window.localStorage.setItem('checkbox', true);
+                }
+                else {
+                    $("#dark-mode-toggle").removeClass("darkEdition");
+                    window.localStorage.setItem('checkbox', false);
+                }
+            });
+        });
+    </script>
 
 </body>
 
