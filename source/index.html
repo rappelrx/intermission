@@ -8,9 +8,9 @@
     <title>The Intermission Orchestra at UCSD</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
+        <link rel="stylesheet" href="./assets/css/noscript.css" />
     </noscript>
 
     <meta name="description"
@@ -18,7 +18,7 @@
     <meta name="keywords"
         content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
     <meta name="google-site-verification" content="PfAjVHk6HN_qTHk_VTc3fODd25pGvjcJCE9qBoO9whw" />
-    <link rel="icon" href="images/TIO_profile2-1-circle.png">
+    <link rel="icon" href="./images/TIO_profile2-1-circle.png">
 </head>
 
 
@@ -31,7 +31,8 @@
             <!-- Inner -->
             <div class="inner">
                 <header>
-                    <h1><a href="index.html" id="logo" class="image logo"><img src="images/TIO_banner2-white.png"></a>
+                    <h1><a href="index.html" id="logo" class="image logo"><img
+                                src="./images/banner_white_transparent.png"></a>
                     </h1>
                     <hr />
                     <!-- <p style="font-style: italic">Music from video games, films, and anime</p> -->
@@ -265,26 +266,28 @@
 
         <div class="wrapper style2 lightEdition darkEdition" id="about-section">
             <article id="main" class="container special">
-                <a href="index.html#preview-about" class="image featured"><img id="banner2" src="./images/TIO_banner2-fbevent.png"
-                        alt="" /></a>
-                <section id="preview-about"></section>
-                <header>
-                    <h2>The background music is now the feature.</h2>
-                    <p>
-                        In late 2015, four UCSD Music students banded together with a unifying idea: an ensemble
-                        dedicated to playing music from video games, anime, and films.
+                <a href="#preview-about" class="image featured scrolly"><img id="banner2"
+                        src="./images/banner_black_transparent.png"
+                        alt="The Intermission Orchestra's banner logo" /></a>
+                <section id="preview-about" style="text-align: center">
+                    <header>
+                        <h2>The background music is now the feature.</h2>
+                        <p>
+                            In late 2015, four UCSD Music students banded together with a unifying idea: an ensemble
+                            dedicated to playing music from video games, anime, and films.
+                        </p>
+                    </header>
+                    <p style="text-align: center">
+                        That, along with the word "Intermission" in fancy font on a UCSD concert program, and The
+                        Intermission Ensemble was born. After the first concert in Spring 2016, our initial small
+                        ensemble
+                        expanded enough to necessitate a name change to The Intermission Orchestra. Today, we are a
+                        full symphonic orchestra that holds three concerts a year and performs at events such
+                        as the Triton Gaming Expo, Winter GameFest, and Animefest.
                     </p>
-                </header>
-                <p style="text-align: center">
-                    That, along with the word "Intermission" in fancy font on a UCSD concert program, and The
-                    Intermission Ensemble was born. After the first concert in Spring 2016, our initial small
-                    ensemble
-                    expanded enough to necessitate a name change to The Intermission Orchestra. Today, we are a
-                    full symphonic orchestra that holds three concerts a year and performs at events such
-                    as the Triton Gaming Expo, Winter GameFest, and Animefest.
-                </p>
-                <p style="text-align: center">We hope to bring music from your favorite media to life, as well as
-                    increase recognition for this genre of music.</p>
+                    <p style="text-align: center">We hope to bring music from your favorite media to life, as well as
+                        increase recognition for this genre of music.</p>
+                </section>
                 <footer>
                     <a href="about.html" class="button">Learn More</a>
                 </footer>
@@ -406,36 +409,29 @@
             else if (dragTheme === "true") {
                 window.localStorage.setItem('checkbox', true);
                 $('#checkbox').prop('checked', true);
-                $('#banner2').prop('src', './images/TIO_banner2-white-smol.png');
+                $('#banner2').prop('src', './images/banner_white_transparent.png');
                 $('#banner2').css({
                     "display": "block",
-                    "margin-left": "auto",
-                    "margin-right": "auto",
-                    "width": "75%",
-                    "padding": "8rem 0px"
+                    "width": "100%"
                 });
             }
             $("#checkbox").click(function () {
                 if ($('#checkbox').prop("checked")) {
                     $("#about-section").addClass("darkEdition");
                     window.localStorage.setItem('checkbox', true);
-                    $('#banner2').prop('src', './images/TIO_banner2-white-smol.png');
+                    $('#banner2').prop('src', './images/banner_white_transparent.png');
                     $('#banner2').css({
                         "display": "block",
-                        "margin-left": "auto",
-                        "margin-right": "auto",
-                        "width": "75%",
-                        "padding": "8rem 0px"
+                        "width": "100%"
                     });
                 }
                 else {
                     $("#about-section").removeClass("darkEdition");
                     window.localStorage.setItem('checkbox', false);
-                    $('#banner2').prop('src', './images/TIO_banner2-fbevent.png');
+                    $('#banner2').prop('src', './images/banner_black_transparent.png');
                     $('#banner2').css({
                         "display": "block",
-                        "width": "100%",
-                        "padding": "0px"
+                        "width": "100%"
                     });
                 }
             });
