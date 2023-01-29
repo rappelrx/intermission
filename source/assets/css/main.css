@@ -2312,7 +2312,7 @@ header .icon.circled {
   background-image: url("../../images/blurred-concertFA22.jpg");
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: #fff;
   text-align: center;
   padding: 5em 0 1em 0;
@@ -3561,7 +3561,7 @@ body.homepage.is-preload #header:after {
   transition: .4s;
 } 
 .slider:before {  
-  background-color: #fff;  
+  background-color: #2b252c; 
   bottom: 4px;  
   content: "";  
   height: 26px;  
@@ -3571,7 +3571,8 @@ body.homepage.is-preload #header:after {
   width: 26px;
 } 
 input:checked + .slider {  
-  background-color: #28acea;
+  background-color: #e1c16e; 
+  /* background-color: #d3a4fb; */
 } 
 input:checked + .slider:before {  
   transform: translateX(26px);
@@ -3586,6 +3587,8 @@ input:checked + .slider:before {
 .darkEdition {
   background-color: #2b252c !important;
   color: white !important;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
 }
 
 .darkEdition h2, 
@@ -3605,6 +3608,8 @@ input:checked + .slider:before {
 .lightEdition {
   background-color: white;
   color: #5b5b5b;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
 }
 
 .lightEdition h2, 
