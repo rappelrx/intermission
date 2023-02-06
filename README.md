@@ -1,5 +1,8 @@
 # Intermission
-Testing Site Link: https://rappelrx.github.io/Intermission/source/ 
+
+This repository is for the official website of the Intermission Orchestra at UC San Diego.
+
+Testing Site Link: https://rappelrx.github.io/Intermission/
 
 UCSD Server Site Link: https://intermission.ucsd.edu/ 
 
