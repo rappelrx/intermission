@@ -3532,12 +3532,12 @@ body.homepage.is-preload #header:after {
 /* STYLES: dark mode toggle */
 
 .theme-switch-wrapper {  
-  display: flex;  
   float: right;  
-  align-items: center;  
-  position: absolute;  
+  position: sticky;  
+  top:0;
   right: 10px; 
   padding-top: 10px; 
+  z-index: 1;
 }
 .theme-switch {  
   display: inline-block;  
