@@ -2907,6 +2907,10 @@ body.homepage.is-preload #header:after {
   display: none;
 }
 
+.mySlides img {
+  border-radius: 15px;
+}
+
 
 /* STYLES: Next and Previous Buttons */
 
@@ -2943,11 +2947,14 @@ body.homepage.is-preload #header:after {
 
 .text {
   color: #f2f2f2;
+  background: rgba(0, 0, 0, 0.5);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 6px;
   width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   text-align: center;
 }
 
@@ -2983,33 +2990,7 @@ body.homepage.is-preload #header:after {
 }
 
 
-/* STYLES: Fading animation */
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
+/* STYLES: Fading animation (moved to about.html as internal css) */
 
 /* STYLES: Soundcloud player */
 

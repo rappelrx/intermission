@@ -9,6 +9,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <style>
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
     <noscript>
         <link rel="stylesheet" href="./assets/css/noscript.css" />
     </noscript>
@@ -18,7 +44,6 @@
     <meta name="keywords"
         content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
     <link rel="icon" href="./images/TIO_profile2-1-circle.png">
-
 </head>
 
 <body class="no-sidebar is-preload">
@@ -65,8 +90,7 @@
             <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox" />
                 <div class="slider round">
-                    <img src="./images/kirby.png" alt="dark mode"
-                        style="width: 26px; padding: 3px 0px 2px 6px;" />
+                    <img src="./images/kirby.png" alt="dark mode" style="width: 26px; padding: 3px 0px 2px 6px;" />
                     <img src="./images/sun-icon.png" alt="light mode" style="width: 26px; padding: 4px 0px 0px 2px;" />
                 </div>
             </label>
@@ -96,27 +120,35 @@
                         <div class="slideshow-container">
                             <div class="mySlides fade">
                                 <img src="./images/about-concertSP16.jpg" style="width:100%">
+                                <div class="text">Spring 2016</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertFA16.jpg" style="width:100%">
+                                <div class="text">Fall 2016</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertFA17.jpg" style="width:100%">
+                                <div class="text">Fall 2017</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertSP18.jpg" style="width:100%">
+                                <div class="text">Spring 2018</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertFA18.jpg" style="width:100%">
+                                <div class="text">Fall 2018</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertWI20.jpg" style="width:100%">
+                                <div class="text">Winter 2020</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertSP22.jpg" style="width:100%">
+                                <div class="text">Spring 2022</div>
                             </div>
                             <div class="mySlides fade">
                                 <img src="./images/about-concertFA22.jpg" style="width:100%">
+                                <div class="text">Fall 2022</div>
                             </div>
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -264,6 +296,38 @@
                 }
             });
         });
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace("dactive"); //dactive instead of active, see css
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " dactive";
+        }
     </script>
 </body>
 
