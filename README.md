@@ -2,7 +2,9 @@
 
 This repository is for the frontend of the official website of the Intermission Orchestra at UC San Diego. The backend is hosted on the UCSD server (acsweb.ucsd.edu).
 
-Testing Site Link: https://rappelrx.github.io/Intermission/
+**Technical Skills**: HTML/CSS, Bootstrap, JavaScript, jQuery
+
+Testing Site Link: https://rappelrx.github.io/intermission/
 
 UCSD Server Site Link: https://intermission.ucsd.edu/ 
 
