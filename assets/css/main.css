@@ -2845,6 +2845,7 @@ body.homepage.is-preload #header:after {
   overflow: hidden;
   margin: auto;
   border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.25);
 }
 
 .gallery.image {
@@ -2909,6 +2910,18 @@ body.homepage.is-preload #header:after {
 
 .mySlides img {
   border-radius: 15px;
+  box-shadow: 0 3px 5px rgba(0,0,0,.25);
+}
+
+.mySlides .text {
+  text-shadow: -1px -1px 4px #2b252c,
+                1px -1px 4px #2b252c,
+               -1px 1px 4px #2b252c,
+                1px 1px 4px #2b252c,
+               -1px 0 4px #2b252c,
+                1px 0 4px #2b252c,
+                0 -1px 4px #2b252c,
+                0 1px 4px #2b252c;
 }
 
 
@@ -2947,14 +2960,11 @@ body.homepage.is-preload #header:after {
 
 .text {
   color: #f2f2f2;
-  background: rgba(0, 0, 0, 0.5);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 6px;
   width: 100%;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   text-align: center;
 }
 
@@ -3046,6 +3056,7 @@ body.homepage.is-preload #header:after {
   .carousel article {
     width: 18em;
     margin: 0 1.25em 0 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,.25);
   }
 }
 
