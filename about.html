@@ -21,6 +21,7 @@
             from {
                 opacity: 0.4;
             }
+
             to {
                 opacity: 1;
             }
@@ -30,6 +31,7 @@
             from {
                 opacity: 0.4;
             }
+
             to {
                 opacity: 1;
             }
@@ -56,8 +58,9 @@
             <!-- Inner -->
             <div class="inner">
                 <header>
-                    <h1><a href="./" id="logo"><img src="./images/banner_white_transparent.png" alt="Intermission Orchestra logo" height=auto
-                                width="270px"></a></h1>
+                    <h1><a href="./" id="logo"><img src="./images/banner_white_transparent.png"
+                                alt="Intermission Orchestra logo" height=auto width="270px"></a></h1>
+                    <a href="#main" class="skip-to-main-content-link">Skip to content</a>
                 </header>
             </div>
 
@@ -263,7 +266,7 @@
         </div>
 
         <!-- Footer -->
-        <div id="footer">
+        <footer id="footer">
             <div class="container">
 
                 <div class="row">
@@ -305,13 +308,15 @@
 
                 </div>
             </div>
-        </div>
+        </footer>
 
     </div>
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.dropotron/1.4.3/jquery.dropotron.min.js" integrity="sha512-ugEhUBPC3XfTEBbRia5d9er1tFe5N4yzwQr3xrNSTfmT09xe0fwYxgfDSLwUKCnFoFtLd5rJBZP5tdfcUzLNvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.dropotron/1.4.3/jquery.dropotron.min.js"
+        integrity="sha512-ugEhUBPC3XfTEBbRia5d9er1tFe5N4yzwQr3xrNSTfmT09xe0fwYxgfDSLwUKCnFoFtLd5rJBZP5tdfcUzLNvw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
@@ -320,22 +325,24 @@
     <script>
         $(document).ready(function () {
             var dragTheme = window.localStorage.getItem('checkbox');
+            var toggleSection = $("#dark-mode-toggle");
+            var checkbox = $("#checkbox");
             if (dragTheme === "false" || dragTheme === null) {
-                $("#dark-mode-toggle").removeClass("darkEdition");
+                toggleSection.removeClass("darkEdition");
                 window.localStorage.setItem('checkbox', false);
-                $('#checkbox').prop('checked', false);
+                checkbox.prop('checked', false);
             }
             else if (dragTheme === "true") {
                 window.localStorage.setItem('checkbox', true);
-                $('#checkbox').prop('checked', true);
+                checkbox.prop('checked', true);
             }
-            $("#checkbox").click(function () {
-                if ($('#checkbox').prop("checked")) {
-                    $("#dark-mode-toggle").addClass("darkEdition");
+            checkbox.click(function () {
+                if (checkbox.prop("checked")) {
+                    toggleSection.addClass("darkEdition");
                     window.localStorage.setItem('checkbox', true);
                 }
                 else {
-                    $("#dark-mode-toggle").removeClass("darkEdition");
+                    toggleSection.removeClass("darkEdition");
                     window.localStorage.setItem('checkbox', false);
                 }
             });
