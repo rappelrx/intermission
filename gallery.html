@@ -67,21 +67,27 @@
             <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox" />
                 <div class="slider round">
-                    <img src="./images/kirby.png" alt="dark mode" style="width: 26px; padding: 3px 0px 2px 6px;" />
-                    <img src="./images/sun-icon.png" alt="light mode" style="width: 26px; padding: 4px 0px 0px 2px;" />
+                    <picture>
+                        <source srcset="./images/kirby.webp" type="image/webp" />
+                        <img src="./images/kirby.png" alt="dark mode" 
+                                style="width: 26px; padding: 3px 0px 2px 6px;" />
+                    </picture>
+                    <picture>
+                        <source srcset="./images/sun-icon.webp" type="image/webp" />
+                        <img src="./images/sun-icon.png" alt="light mode" 
+                                style="width: 26px; padding: 4px 0px 0px 2px;" />
+                    </picture>
                 </div>
             </label>
         </div>
 
         <!-- Main -->
         <div class="wrapper style2 lightEdition darkEdition" id="dark-mode-toggle">
-
             <div class="container">
                 <article id="main" class="special">
                     <header style="margin-top: -1em; margin-bottom: 2em">
                         <h2>Gallery and Archives</h2>
                     </header>
-                    <!-- <p style="margin-top: -1em"><em>Coming Soon</em><br><br></p> -->
                 </article>
 
                 <div class="row" style="padding-top: .5em">
@@ -90,7 +96,10 @@
                             href="https://drive.google.com/drive/folders/1nRfHMy6CkX-SQuX09wgUPWcN7rJF6SOE"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_FA23.jpg" class="gallery image" alt="Fall 2023 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_FA23.webp" type="image/webp" />
+                                    <img src="./images/gallery_FA23.jpg" class="gallery image" alt="Fall 2023 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Fall 2023</p>
@@ -106,7 +115,10 @@
                             href="https://drive.google.com/drive/folders/15M65_gQs8gSsx3KkhdEXT9t5drEMn7dh"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_SP23.jpg" class="gallery image" alt="Spring 2023 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_SP23.webp" type="image/webp" />
+                                    <img src="./images/gallery_SP23.jpg" class="gallery image" alt="Spring 2023 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Spring 2023</p>
@@ -121,6 +133,7 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/YrfrmqfnsRuqWWRJ8"
                             target="_blank">
                             <div class="gallery">
+                                <!-- gallery_WI23.jpg is smaller in file size than gallery_WI23.webp -->
                                 <img src="./images/gallery_WI23.jpg" class="gallery image" alt="Winter 2023 Gallery">
                                 <div class="gallery overlay">
                                     <div class="gallery text">
@@ -136,8 +149,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/xE2E1uAKbFWEswXy7"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_FA22-Concert.jpg" class="gallery image"
-                                    alt="Fall 2022 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_FA22.webp" type="image/webp" />
+                                    <img src="./images/gallery_FA22.jpg" class="gallery image" alt="Fall 2022 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Fall 2022</p>
@@ -149,25 +164,10 @@
                         </a>
                     </article>
 
-                    <!--<article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/S9AT4AhwFny2Hevm8"
-                            target="_blank">
-                            <div class="gallery">
-                                <img src="./images/gallery_FA22-TG.png" class="gallery image" alt="">
-                                <div class="gallery overlay">
-                                    <div class="gallery text" style="top: 35%">
-                                        <p style="text-align: center; padding-bottom: 3px;">Triton Gaming</p>
-                                        <p style="text-align: center">Fall 2022 Division Showcase</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC:
-                                            Justin Lu</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>-->
-
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/k3F7dTLHtK2NNWz28"
                             target="_blank">
                             <div class="gallery">
+                                <!-- gallery_SP22.jpg is smaller in file size than gallery_SP22.webp -->
                                 <img src="./images/gallery_SP22.jpg" class="gallery image" alt="Spring 2022 Gallery">
                                 <div class="gallery overlay">
                                     <div class="gallery text">
@@ -183,7 +183,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/chYA2ygq74pLnDv5A"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_WI20.jpg" class="gallery image" alt="Winter 2020 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_WI20.webp" type="image/webp" />
+                                    <img src="./images/gallery_WI20.jpg" class="gallery image" alt="Winter 2020 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Winter 2020</p>
@@ -198,7 +201,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/9FwXVkLTq8qyUfyn6"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_FA19.jpg" class="gallery image" alt="Fall 2019 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_FA19.webp" type="image/webp" />
+                                    <img src="./images/gallery_FA19.jpg" class="gallery image" alt="Fall 2019 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Fall 2019</p>
@@ -213,7 +219,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/Jjqs5NdNzRx5VTGJA"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_SP19.jpg" class="gallery image" alt="Spring 2019 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_SP19.webp" type="image/webp" />
+                                    <img src="./images/gallery_SP19.jpg" class="gallery image" alt="Spring 2019 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Spring 2019</p>
@@ -228,7 +237,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/A337EGNYk3AnQVdy9"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_WI19.jpg" class="gallery image" alt="Winter 2019 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_WI19.webp" type="image/webp" />
+                                    <img src="./images/gallery_WI19.jpg" class="gallery image" alt="Winter 2019 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Winter 2019</p>
@@ -243,7 +255,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/rFP2jtZwJSnszS5E9"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_FA18.jpg" class="gallery image" alt="Fall 2018 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_FA18.webp" type="image/webp" />
+                                    <img src="./images/gallery_FA18.jpg" class="gallery image" alt="Fall 2018 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Fall 2018</p>
@@ -258,8 +273,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/sGs2hi2mMMVKh2SH8"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/about-concertSP18.jpg" class="gallery image"
-                                    alt="Spring 2018 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_SP18.webp" type="image/webp" />
+                                    <img src="./images/gallery_SP18.jpg" class="gallery image" alt="Spring 2018 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Spring 2018</p>
@@ -274,7 +291,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/eowa5magT3k7KWrt6"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_WI18.jpg" class="gallery image" alt="Winter 2018 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_WI18.webp" type="image/webp" />
+                                    <img src="./images/gallery_WI18.jpg" class="gallery image" alt="Winter 2018 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Winter 2018</p>
@@ -288,7 +308,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/Utzcax7BVvwNzpCw6"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_FA17.jpg" class="gallery image" alt="Fall 2017 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_FA17.webp" type="image/webp" />
+                                    <img src="./images/gallery_FA17.jpg" class="gallery image" alt="Fall 2017 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Fall 2017</p>
@@ -302,7 +325,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/epyENCuSSryQSxsR8"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_SP17.jpg" class="gallery image" alt="Spring 2017 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_SP17.webp" type="image/webp" />
+                                    <img src="./images/gallery_SP17.jpg" class="gallery image" alt="Spring 2017 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Spring 2017</p>
@@ -316,7 +342,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/N6RVK3UYTdCUmeNB7"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_WI17.jpg" class="gallery image" alt="Winter 2017 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_WI17.webp" type="image/webp" />
+                                    <img src="./images/gallery_WI17.jpg" class="gallery image" alt="Winter 2017 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Winter 2017</p>
@@ -330,7 +359,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/zYLA3XkY5YeXbtKW6"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_FA16.jpg" class="gallery image" alt="Fall 2016 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_FA16.webp" type="image/webp" />
+                                    <img src="./images/gallery_FA16.jpg" class="gallery image" alt="Fall 2016 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Fall 2016</p>
@@ -344,7 +376,10 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/WTaNKhoPhkutghAH8"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_SP16.jpg" class="gallery image" alt="Spring 2016 Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_SP16.webp" type="image/webp" />
+                                    <img src="./images/gallery_SP16.jpg" class="gallery image" alt="Spring 2016 Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Spring 2016</p>
@@ -360,8 +395,11 @@
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/4at8qKx87m7hX4qh9"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_artcommittee.jpg" class="gallery image"
-                                    alt="Art Committee Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_artcommittee.webp" type="image/webp" />
+                                    <img src="./images/gallery_artcommittee.jpg" class="gallery image"
+                                        alt="Art Committee Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Art Committee</p>
@@ -370,9 +408,7 @@
                                 </div>
                             </div>
                         </a>
-
                     </article>
-
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/qbobWezRNaawdFoGA"
                             target="_blank">
                             <div class="gallery">
@@ -387,12 +423,14 @@
                             </div>
                         </a>
                     </article>
-
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/8kUZE16QCzjKBGjx8"
                             target="_blank">
                             <div class="gallery">
-                                <img src="./images/gallery_banners.png" class="gallery image"
-                                    alt="Concert Banners Gallery">
+                                <picture>
+                                    <source srcset="./images/gallery_banners.webp" type="image/webp" />
+                                    <img src="./images/gallery_banners.png" class="gallery image"
+                                        alt="Concert Banners Gallery">
+                                </picture>
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Concert Banners</p>
@@ -402,11 +440,8 @@
                             </div>
                         </a>
                     </article>
-
                 </div>
-
             </div>
-
         </div>
 
         <!-- Footer -->

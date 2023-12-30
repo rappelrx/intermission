@@ -5,7 +5,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>Intermission Orchestra at UC San Diego</title>
+    <title>The Intermission Orchestra at UC San Diego</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -76,8 +76,16 @@
             <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox" />
                 <div class="slider round">
-                    <img src="./images/kirby.png" alt="dark mode" style="width: 26px; padding: 3px 0px 2px 6px;" />
-                    <img src="./images/sun-icon.png" alt="light mode" style="width: 26px; padding: 4px 0px 0px 2px;" />
+                    <picture>
+                        <source srcset="./images/kirby.webp" type="image/webp" />
+                        <img src="./images/kirby.png" alt="dark mode" 
+                                style="width: 26px; padding: 3px 0px 2px 6px;" />
+                    </picture>
+                    <picture>
+                        <source srcset="./images/sun-icon.webp" type="image/webp" />
+                        <img src="./images/sun-icon.png" alt="light mode" 
+                                style="width: 26px; padding: 4px 0px 0px 2px;" />
+                    </picture>
                 </div>
             </label>
         </div>
