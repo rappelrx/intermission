@@ -2,12 +2,31 @@
 <!--
 	Copyright (c) 2024, The Intermission Orchestra at UC San Diego.
 -->
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="light">
 
 <head>
     <title>About | Intermission Orchestra at UC San Diego</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#272727" />
+    <script>
+        const colorMode = () => { 
+            // if localStorage preference exists
+            const localTheme = localStorage.getItem('theme');
+            if (localTheme) {
+                return localTheme;
+            }
+            // if OS preference exists
+            const mql = window.matchMedia('(prefers-color-scheme: dark)');
+            if (typeof mql.matches === 'boolean') {
+                return mql.matches ? 'dark' : 'light';
+            }
+            return 'light';
+        };
+        // set theme based on colorMode()
+        document.documentElement.setAttribute('data-theme', colorMode());
+    </script>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <style>
         .fade {
@@ -16,24 +35,12 @@
             animation-name: fade;
             animation-duration: 1.5s;
         }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: 0.4;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
         @keyframes fade {
             from {
-                opacity: 0.4;
+                filter: grayscale(1) blur(1px);
             }
-
             to {
-                opacity: 1;
+                filter: grayscale(0) blur(0);
             }
         }
     </style>
@@ -107,7 +114,7 @@
         </div>
 
         <!-- Main -->
-        <div class="wrapper style1 lightEdition darkEdition" id="dark-mode-toggle">
+        <div class="wrapper style1 lightEdition" id="dark-mode-toggle">
             <div class="container">
                 <article id="main" class="special">
                     <header>
@@ -373,43 +380,34 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        $(document).ready(function () {
-            var dragTheme = window.localStorage.getItem('checkbox');
-            var toggleSection = $("#dark-mode-toggle");
-            var checkbox = $("#checkbox");
-            if (dragTheme === "false" || dragTheme === null) {
-                toggleSection.removeClass("darkEdition");
-                window.localStorage.setItem('checkbox', false);
-                checkbox.prop('checked', false);
+        var checkbox = $("#checkbox");
+        var bannerLogo = $("#banner2");
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            checkbox.prop('checked', true);
+        }
+        else {
+            checkbox.prop('checked', false);
+        }
+        // when checkbox is clicked
+        checkbox.click(function () {
+            if (checkbox.prop("checked")) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                window.localStorage.setItem('theme', 'dark');
             }
-            else if (dragTheme === "true") {
-                window.localStorage.setItem('checkbox', true);
-                checkbox.prop('checked', true);
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                window.localStorage.setItem('theme', 'light');
             }
-            checkbox.click(function () {
-                if (checkbox.prop("checked")) {
-                    toggleSection.addClass("darkEdition");
-                    window.localStorage.setItem('checkbox', true);
-                }
-                else {
-                    toggleSection.removeClass("darkEdition");
-                    window.localStorage.setItem('checkbox', false);
-                }
-            });
         });
-    </script>
-    <script>
+        // for slideshow (code specific to about.html)
         var slideIndex = 1;
         showSlides(slideIndex);
-
         function plusSlides(n) {
             showSlides((slideIndex += n));
         }
-
         function currentSlide(n) {
             showSlides((slideIndex = n));
         }
-
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
