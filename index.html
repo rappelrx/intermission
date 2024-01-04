@@ -11,7 +11,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#272727" />
     <script>
-        const colorMode = () => { 
+        const colorMode = () => {
             // if localStorage preference exists
             const localTheme = localStorage.getItem('theme');
             if (localTheme) {
@@ -40,16 +40,16 @@
     <meta name="google-site-verification" content="PfAjVHk6HN_qTHk_VTc3fODd25pGvjcJCE9qBoO9whw" />
     <link rel="canonical" href="./">
     <link rel="icon" href="./images/TIO_profile2-1-circle.png">
+    <script defer src="https://kit.fontawesome.com/762f049bb9.js" 
+        crossorigin="anonymous" data-search-pseudo-elements></script>
 </head>
 
 
 <body class="homepage is-preload">
     <div id="page-wrapper">
-
         <!-- Header -->
-        <div id="header">
+        <div role="banner" id="header">
             <div id="header-background"></div>
-
             <!-- Inner -->
             <div class="inner">
                 <header>
@@ -64,11 +64,10 @@
                     <a href="#banner" class="button circled scrolly"></a>
                 </footer>
             </div>
-
             <!-- Nav -->
-            <nav id="nav">
+            <nav role="navigation" id="nav">
                 <ul>
-                    <li><a href="./">Home</a></li>
+                    <li><a href="./" aria-current="page">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./upcoming.html">Upcoming</a></li>
                     <li>
@@ -89,7 +88,6 @@
             </nav>
         </div> <!-- End of Header -->
 
-
         <!--Dark mode toggle-->
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
@@ -97,19 +95,18 @@
                 <div class="slider round">
                     <picture>
                         <source srcset="./images/kirby.webp" type="image/webp" />
-                        <img src="./images/kirby.png" alt="dark mode" 
-                                style="width: 26px; padding: 3px 0px 2px 6px;" />
+                        <img src="./images/kirby.png" alt="dark mode" style="width: 26px; padding: 3px 0px 2px 6px;" />
                     </picture>
                     <picture>
                         <source srcset="./images/sun-icon.webp" type="image/webp" />
-                        <img src="./images/sun-icon.png" alt="light mode" 
-                                style="width: 26px; padding: 4px 0px 0px 2px;" />
+                        <img src="./images/sun-icon.png" alt="light mode"
+                            style="width: 26px; padding: 4px 0px 0px 2px;" />
                     </picture>
                 </div>
             </label>
         </div>
 
-        <!-- Banner -->
+        <!-- Post-banner -->
         <section id="banner" class="lightEdition">
             <header>
                 <h2>We are <br><strong>The Intermission Orchestra</strong> <br>at UC San Diego.</h2>
@@ -121,7 +118,7 @@
         </section>
 
         <!-- Carousel -->
-        <section class="carousel">
+        <section role="complementary" class="carousel">
             <div class="reel" id="carousel-section">
 
                 <article class="lightEdition">
@@ -265,14 +262,15 @@
         </section> <!-- End of Carousel -->
 
         <!-- Main -->
-        <div class="wrapper style2 lightEdition" id="main-section">
-            <div class="container">
-                <article id="main" class="special">
-                    <header>
-                        <h2>Upcoming Performances</h2>
-                    </header>
-                    <div class="row" style="padding-top: 1em; text-align: center">
-                        <!--<article class="col-4 col-12-mobile special">
+        <main role="main">
+            <div class="wrapper style2 lightEdition" id="main-section">
+                <div class="container">
+                    <article id="main" class="special">
+                        <header>
+                            <h2>Upcoming Performances</h2>
+                        </header>
+                        <div class="row" style="padding-top: 1em; text-align: center">
+                            <!--<article class="col-4 col-12-mobile special">
                             <h3><a href="#">Placeholder Event</a></h3>
                             <p style="padding-top: 0.5em; text-align: center">
                                 To be determined...<br>
@@ -280,56 +278,56 @@
                                 Placeholder Location
                             </p>
                         </article>-->
-                        <article class="col-12 col-12-mobile special">
-                            <h3><a href="https://www.youtube.com/@TIOatUCSD/streams" target="_blank">Winter 2024
-                                    Concert</a></h3>
-                            <p style="padding-top: 0.5em; text-align: center">
-                                March 16, 2024<br>
-                                6 PM - 9 PM<br>
-                                PC West Ballroom
-                            </p>
-                        </article>
-                    </div>
+                            <article class="col-12 col-12-mobile special">
+                                <h3><a href="https://www.youtube.com/@TIOatUCSD/streams" target="_blank">Winter 2024
+                                        Concert</a></h3>
+                                <p style="padding-top: 0.5em; text-align: center">
+                                    March 16, 2024<br>
+                                    6 PM - 9 PM<br>
+                                    PC West Ballroom
+                                </p>
+                            </article>
+                        </div>
 
+                        <footer>
+                            <a href="./upcoming.html" class="button">More</a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+
+            <div class="wrapper style2 lightEdition" id="about-section">
+                <article id="main" class="container special">
+                    <a href="#preview-about" class="image featured scrolly"><img id="banner2"
+                            src="./images/banner_black_transparent.png"
+                            alt="The Intermission Orchestra's banner logo" /></a>
+                    <section id="preview-about" style="text-align: center">
+                        <header>
+                            <h2 style="padding-top: 0.3em;">The background music is now the feature.</h2>
+                            <p>
+                                In late 2015, four UCSD Music students banded together with a unifying idea: an ensemble
+                                dedicated to playing music from video games, anime, and films.
+                            </p>
+                        </header>
+                        <p style="text-align: left">
+                            That, along with the word "Intermission" in fancy font on a UCSD concert program, and The
+                            Intermission Ensemble was born. After the first concert in Spring 2016, our initial small
+                            ensemble
+                            expanded enough to necessitate a name change to The Intermission Orchestra. Today, we are a
+                            full symphonic orchestra that holds three concerts a year and performs at events such
+                            as the Triton Gaming Expo, Winter GameFest, and Animefest.
+                        </p>
+                        <p style="text-align: left">We hope to bring music from your favorite media to life, as well as
+                            increase recognition for this genre of music.</p>
+                    </section>
                     <footer>
-                        <a href="./upcoming.html" class="button">More</a>
+                        <a href="./about.html" class="button">Learn More</a>
                     </footer>
                 </article>
             </div>
-        </div>
-
-        <div class="wrapper style2 lightEdition" id="about-section">
-            <article id="main" class="container special">
-                <a href="#preview-about" class="image featured scrolly"><img id="banner2"
-                        src="./images/banner_black_transparent.png"
-                        alt="The Intermission Orchestra's banner logo" /></a>
-                <section id="preview-about" style="text-align: center">
-                    <header>
-                        <h2 style="padding-top: 0.3em;">The background music is now the feature.</h2>
-                        <p>
-                            In late 2015, four UCSD Music students banded together with a unifying idea: an ensemble
-                            dedicated to playing music from video games, anime, and films.
-                        </p>
-                    </header>
-                    <p style="text-align: left">
-                        That, along with the word "Intermission" in fancy font on a UCSD concert program, and The
-                        Intermission Ensemble was born. After the first concert in Spring 2016, our initial small
-                        ensemble
-                        expanded enough to necessitate a name change to The Intermission Orchestra. Today, we are a
-                        full symphonic orchestra that holds three concerts a year and performs at events such
-                        as the Triton Gaming Expo, Winter GameFest, and Animefest.
-                    </p>
-                    <p style="text-align: left">We hope to bring music from your favorite media to life, as well as
-                        increase recognition for this genre of music.</p>
-                </section>
-                <footer>
-                    <a href="./about.html" class="button">Learn More</a>
-                </footer>
-            </article>
-        </div>
-
+        </main>
         <!-- Footer -->
-        <footer id="footer">
+        <footer role="contentinfo" id="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -342,19 +340,18 @@
                                 or shoot us a message on one of our <a href="https://tiosocialmedia.carrd.co/"
                                     target="_blank">social media pages</a>.</p>
                             <ul class="icons">
-                                <li><a href="https://www.youtube.com/IntermissionOrchestraatUCSD" target="_blank"
-                                        class="icon fa-youtube-play"><span class="label">Youtube</span></a></li>
-                                <li><a href="https://www.facebook.com/IntermissionUCSD" target="_blank"
-                                        class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                <li><a href="https://www.instagram.com/TIOatUCSD" target="_blank"
-                                        class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="https://www.twitch.tv/IntermissionUCSD" target="_blank"
-                                        class="icon fa-twitch"><span class="label">Twitch</span></a></li>
-                                <li><a href="https://twitter.com/TIOatUCSD" target="_blank"
-                                        class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="https://www.youtube.com/IntermissionOrchestraatUCSD" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/IntermissionUCSD" target="_blank"><i
+                                            class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/TIOatUCSD" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.twitch.tv/IntermissionUCSD" target="_blank"><i
+                                            class="fa-brands fa-twitch"></i></a></li>
+                                <li><a href="https://twitter.com/TIOatUCSD" target="_blank"><i
+                                            class="fa-brands fa-twitter"></i></a></li>
                             </ul>
                         </section>
-
                         <!-- Copyright -->
                         <div class="copyright">
                             &copy;
@@ -367,7 +364,7 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </div> <!-- End of page wrapper -->
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

@@ -11,7 +11,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#272727" />
     <script>
-        const colorMode = () => { 
+        const colorMode = () => {
             // if localStorage preference exists
             const localTheme = localStorage.getItem('theme');
             if (localTheme) {
@@ -37,16 +37,13 @@
     <meta name="keywords"
         content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
     <link rel="icon" href="./images/TIO_profile2-1-circle.png">
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-
+    <script defer src="https://kit.fontawesome.com/762f049bb9.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="no-sidebar is-preload">
     <div id="page-wrapper">
-
         <!-- Header -->
-        <div id="header">
-
+        <div role="banner" id="header">
             <div id="header-background"></div>
             <!-- Inner -->
             <div class="inner">
@@ -56,9 +53,8 @@
                     <a href="#main" class="skip-to-main-content-link">Skip to content</a>
                 </header>
             </div>
-
             <!-- Nav -->
-            <nav id="nav">
+            <nav role="navigation" id="nav">
                 <ul>
                     <li><a href="./">Home</a></li>
                     <li><a href="./about.html">About</a></li>
@@ -75,7 +71,7 @@
                             <li><a href="./recordings.html#20162017">2016 – 2017</a></li>
                         </ul>
                     </li>
-                    <li><a href="./gallery.html">Gallery</a></li>
+                    <li><a href="./gallery.html" aria-current="page">Gallery</a></li>
                     <li><a href="./join.html">Join</a></li>
                 </ul>
             </nav>
@@ -88,327 +84,352 @@
                 <div class="slider round">
                     <picture>
                         <source srcset="./images/kirby.webp" type="image/webp" />
-                        <img src="./images/kirby.png" alt="dark mode" 
-                                style="width: 26px; padding: 3px 0px 2px 6px;" />
+                        <img src="./images/kirby.png" alt="dark mode" style="width: 26px; padding: 3px 0px 2px 6px;" />
                     </picture>
                     <picture>
                         <source srcset="./images/sun-icon.webp" type="image/webp" />
-                        <img src="./images/sun-icon.png" alt="light mode" 
-                                style="width: 26px; padding: 4px 0px 0px 2px;" />
+                        <img src="./images/sun-icon.png" alt="light mode"
+                            style="width: 26px; padding: 4px 0px 0px 2px;" />
                     </picture>
                 </div>
             </label>
         </div>
 
         <!-- Main -->
-        <div class="wrapper style2 lightEdition" id="dark-mode-toggle">
+        <main role="main" id="main" class="wrapper style2 lightEdition">
             <div class="container">
-                <article id="main" class="special">
-                    <header style="margin-top: -1em; margin-bottom: 2em">
+                <article class="special">
+                    <header>
                         <h2>Gallery and Archives</h2>
                     </header>
+                    <div class="row" style="padding-top: .5em">
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://drive.google.com/drive/folders/1nRfHMy6CkX-SQuX09wgUPWcN7rJF6SOE"
+                                target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_FA23.webp" type="image/webp" />
+                                        <img src="./images/gallery_FA23.jpg" class="gallery image"
+                                            alt="Fall 2023 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Fall 2023</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Marco
+                                                Liu</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://drive.google.com/drive/folders/15M65_gQs8gSsx3KkhdEXT9t5drEMn7dh"
+                                target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_SP23.webp" type="image/webp" />
+                                        <img src="./images/gallery_SP23.jpg" class="gallery image"
+                                            alt="Spring 2023 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Spring 2023</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Zach
+                                                Szabo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/YrfrmqfnsRuqWWRJ8" target="_blank">
+                                <div class="gallery">
+                                    <!-- gallery_WI23.jpg is smaller in file size than gallery_WI23.webp -->
+                                    <img src="./images/gallery_WI23.jpg" class="gallery image"
+                                        alt="Winter 2023 Gallery">
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Winter 2023</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/xE2E1uAKbFWEswXy7" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_FA22.webp" type="image/webp" />
+                                        <img src="./images/gallery_FA22.jpg" class="gallery image"
+                                            alt="Fall 2022 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Fall 2022</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC:
+                                                Justin Lu</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/k3F7dTLHtK2NNWz28" target="_blank">
+                                <div class="gallery">
+                                    <!-- gallery_SP22.jpg is smaller in file size than gallery_SP22.webp -->
+                                    <img src="./images/gallery_SP22.jpg" class="gallery image"
+                                        alt="Spring 2022 Gallery">
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Spring 2022</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/chYA2ygq74pLnDv5A" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_WI20.webp" type="image/webp" />
+                                        <img src="./images/gallery_WI20.jpg" class="gallery image"
+                                            alt="Winter 2020 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Winter 2020</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/9FwXVkLTq8qyUfyn6" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_FA19.webp" type="image/webp" />
+                                        <img src="./images/gallery_FA19.jpg" class="gallery image"
+                                            alt="Fall 2019 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Fall 2019</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/Jjqs5NdNzRx5VTGJA" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_SP19.webp" type="image/webp" />
+                                        <img src="./images/gallery_SP19.jpg" class="gallery image"
+                                            alt="Spring 2019 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Spring 2019</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/A337EGNYk3AnQVdy9" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_WI19.webp" type="image/webp" />
+                                        <img src="./images/gallery_WI19.jpg" class="gallery image"
+                                            alt="Winter 2019 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Winter 2019</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/rFP2jtZwJSnszS5E9" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_FA18.webp" type="image/webp" />
+                                        <img src="./images/gallery_FA18.jpg" class="gallery image"
+                                            alt="Fall 2018 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Fall 2018</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/sGs2hi2mMMVKh2SH8" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_SP18.webp" type="image/webp" />
+                                        <img src="./images/gallery_SP18.jpg" class="gallery image"
+                                            alt="Spring 2018 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Spring 2018</p>
+                                            <p style="text-align: center"><i
+                                                    class="fa-regular fa-images"></i>&nbsp;&nbsp;PC: Akari
+                                                Tajima</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/eowa5magT3k7KWrt6" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_WI18.webp" type="image/webp" />
+                                        <img src="./images/gallery_WI18.jpg" class="gallery image"
+                                            alt="Winter 2018 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Winter 2018</p>
+                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/Utzcax7BVvwNzpCw6" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_FA17.webp" type="image/webp" />
+                                        <img src="./images/gallery_FA17.jpg" class="gallery image"
+                                            alt="Fall 2017 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Fall 2017</p>
+                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/epyENCuSSryQSxsR8" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_SP17.webp" type="image/webp" />
+                                        <img src="./images/gallery_SP17.jpg" class="gallery image"
+                                            alt="Spring 2017 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Spring 2017</p>
+                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/N6RVK3UYTdCUmeNB7" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_WI17.webp" type="image/webp" />
+                                        <img src="./images/gallery_WI17.jpg" class="gallery image"
+                                            alt="Winter 2017 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Winter 2017</p>
+                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/zYLA3XkY5YeXbtKW6" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_FA16.webp" type="image/webp" />
+                                        <img src="./images/gallery_FA16.jpg" class="gallery image"
+                                            alt="Fall 2016 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Fall 2016</p>
+                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="col-4 col-12-mobile special"><a
+                                href="https://photos.app.goo.gl/WTaNKhoPhkutghAH8" target="_blank">
+                                <div class="gallery">
+                                    <picture>
+                                        <source srcset="./images/gallery_SP16.webp" type="image/webp" />
+                                        <img src="./images/gallery_SP16.jpg" class="gallery image"
+                                            alt="Spring 2016 Gallery">
+                                    </picture>
+                                    <div class="gallery overlay">
+                                        <div class="gallery text">
+                                            <p style="text-align: center">Spring 2016</p>
+                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
                 </article>
-
-                <div class="row" style="padding-top: .5em">
-
-                    <article class="col-4 col-12-mobile special"><a
-                            href="https://drive.google.com/drive/folders/1nRfHMy6CkX-SQuX09wgUPWcN7rJF6SOE"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_FA23.webp" type="image/webp" />
-                                    <img src="./images/gallery_FA23.jpg" class="gallery image" alt="Fall 2023 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Fall 2023</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Marco
-                                            Liu</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a
-                            href="https://drive.google.com/drive/folders/15M65_gQs8gSsx3KkhdEXT9t5drEMn7dh"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_SP23.webp" type="image/webp" />
-                                    <img src="./images/gallery_SP23.jpg" class="gallery image" alt="Spring 2023 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Spring 2023</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Zach
-                                            Szabo</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/YrfrmqfnsRuqWWRJ8"
-                            target="_blank">
-                            <div class="gallery">
-                                <!-- gallery_WI23.jpg is smaller in file size than gallery_WI23.webp -->
-                                <img src="./images/gallery_WI23.jpg" class="gallery image" alt="Winter 2023 Gallery">
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Winter 2023</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/xE2E1uAKbFWEswXy7"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_FA22.webp" type="image/webp" />
-                                    <img src="./images/gallery_FA22.jpg" class="gallery image" alt="Fall 2022 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Fall 2022</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC:
-                                            Justin Lu</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/k3F7dTLHtK2NNWz28"
-                            target="_blank">
-                            <div class="gallery">
-                                <!-- gallery_SP22.jpg is smaller in file size than gallery_SP22.webp -->
-                                <img src="./images/gallery_SP22.jpg" class="gallery image" alt="Spring 2022 Gallery">
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Spring 2022</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/chYA2ygq74pLnDv5A"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_WI20.webp" type="image/webp" />
-                                    <img src="./images/gallery_WI20.jpg" class="gallery image" alt="Winter 2020 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Winter 2020</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/9FwXVkLTq8qyUfyn6"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_FA19.webp" type="image/webp" />
-                                    <img src="./images/gallery_FA19.jpg" class="gallery image" alt="Fall 2019 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Fall 2019</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/Jjqs5NdNzRx5VTGJA"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_SP19.webp" type="image/webp" />
-                                    <img src="./images/gallery_SP19.jpg" class="gallery image" alt="Spring 2019 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Spring 2019</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/A337EGNYk3AnQVdy9"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_WI19.webp" type="image/webp" />
-                                    <img src="./images/gallery_WI19.jpg" class="gallery image" alt="Winter 2019 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Winter 2019</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/rFP2jtZwJSnszS5E9"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_FA18.webp" type="image/webp" />
-                                    <img src="./images/gallery_FA18.jpg" class="gallery image" alt="Fall 2018 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Fall 2018</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/sGs2hi2mMMVKh2SH8"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_SP18.webp" type="image/webp" />
-                                    <img src="./images/gallery_SP18.jpg" class="gallery image" alt="Spring 2018 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Spring 2018</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i>&nbsp;&nbsp;PC: Akari
-                                            Tajima</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/eowa5magT3k7KWrt6"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_WI18.webp" type="image/webp" />
-                                    <img src="./images/gallery_WI18.jpg" class="gallery image" alt="Winter 2018 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Winter 2018</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/Utzcax7BVvwNzpCw6"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_FA17.webp" type="image/webp" />
-                                    <img src="./images/gallery_FA17.jpg" class="gallery image" alt="Fall 2017 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Fall 2017</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/epyENCuSSryQSxsR8"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_SP17.webp" type="image/webp" />
-                                    <img src="./images/gallery_SP17.jpg" class="gallery image" alt="Spring 2017 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Spring 2017</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/N6RVK3UYTdCUmeNB7"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_WI17.webp" type="image/webp" />
-                                    <img src="./images/gallery_WI17.jpg" class="gallery image" alt="Winter 2017 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Winter 2017</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/zYLA3XkY5YeXbtKW6"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_FA16.webp" type="image/webp" />
-                                    <img src="./images/gallery_FA16.jpg" class="gallery image" alt="Fall 2016 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Fall 2016</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/WTaNKhoPhkutghAH8"
-                            target="_blank">
-                            <div class="gallery">
-                                <picture>
-                                    <source srcset="./images/gallery_SP16.webp" type="image/webp" />
-                                    <img src="./images/gallery_SP16.jpg" class="gallery image" alt="Spring 2016 Gallery">
-                                </picture>
-                                <div class="gallery overlay">
-                                    <div class="gallery text">
-                                        <p style="text-align: center">Spring 2016</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
 
                 <div class="row" style="margin-top: 2em">
                     <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/4at8qKx87m7hX4qh9"
@@ -422,7 +443,7 @@
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Art Committee</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
+                                        <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
                                     </div>
                                 </div>
                             </div>
@@ -436,7 +457,7 @@
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Concert Programs</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
+                                        <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
                                     </div>
                                 </div>
                             </div>
@@ -453,7 +474,7 @@
                                 <div class="gallery overlay">
                                     <div class="gallery text">
                                         <p style="text-align: center">Concert Banners</p>
-                                        <p style="text-align: center"><i class="far fa-images"></i></p>
+                                        <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
                                     </div>
                                 </div>
                             </div>
@@ -461,15 +482,13 @@
                     </article>
                 </div>
             </div>
-        </div>
+        </main>
 
         <!-- Footer -->
-        <footer id="footer">
+        <footer role="contentinfo" id="footer">
             <div class="container">
-
                 <div class="row">
                     <div class="col-12">
-
                         <!-- Contact -->
                         <section class="contact">
                             <header>
@@ -479,20 +498,18 @@
                                 or shoot us a message on one of our <a href="https://tiosocialmedia.carrd.co/"
                                     target="_blank">social media pages</a>.</p>
                             <ul class="icons">
-                                <li><a href="https://www.youtube.com/IntermissionOrchestraatUCSD" target="_blank"
-                                        class="icon fa-youtube-play"><span class="label">Youtube</span></a></li>
-                                <li><a href="https://www.facebook.com/IntermissionUCSD" target="_blank"
-                                        class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                <li><a href="https://www.instagram.com/TIOatUCSD" target="_blank"
-                                        class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="https://www.twitch.tv/IntermissionUCSD" target="_blank"
-                                        class="icon fa-twitch"><span class="label">Twitch</span></a></li>
-                                <li><a href="https://twitter.com/TIOatUCSD" target="_blank"
-                                        class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-
+                                <li><a href="https://www.youtube.com/IntermissionOrchestraatUCSD" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/IntermissionUCSD" target="_blank"><i
+                                            class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/TIOatUCSD" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.twitch.tv/IntermissionUCSD" target="_blank"><i
+                                            class="fa-brands fa-twitch"></i></a></li>
+                                <li><a href="https://twitter.com/TIOatUCSD" target="_blank"><i
+                                            class="fa-brands fa-twitter"></i></a></li>
                             </ul>
                         </section>
-
                         <!-- Copyright -->
                         <div class="copyright">
                             &copy;
@@ -501,14 +518,11 @@
                             </span>
                             The Intermission Orchestra at UC San Diego.
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </footer>
-
-    </div>
+    </div> <!-- End of page wrapper -->
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

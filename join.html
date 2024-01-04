@@ -37,13 +37,13 @@
     <meta name="keywords"
         content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
     <link rel="icon" href="./images/TIO_profile2-1-circle.png">
+    <script defer src="https://kit.fontawesome.com/762f049bb9.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="right-sidebar is-preload">
     <div id="page-wrapper">
-
         <!-- Header -->
-        <div id="header">
+        <div role="banner" id="header">
             <div id="header-background"></div>
             <!-- Inner -->
             <div class="inner">
@@ -53,9 +53,8 @@
                     <a href="#main" class="skip-to-main-content-link">Skip to content</a>
                 </header>
             </div>
-
             <!-- Nav -->
-            <nav id="nav">
+            <nav role="navigation" id="nav">
                 <ul>
                     <li><a href="./">Home</a></li>
                     <li><a href="./about.html">About</a></li>
@@ -73,7 +72,7 @@
                         </ul>
                     </li>
                     <li><a href="./gallery.html">Gallery</a></li>
-                    <li><a href="./join.html">Join</a></li>
+                    <li><a href="./join.html" aria-current="page">Join</a></li>
                 </ul>
             </nav>
         </div> <!-- End of Header -->
@@ -98,7 +97,7 @@
         </div>
 
         <!-- Main -->
-        <div class="wrapper style1 lightEdition" id="dark-mode-toggle">
+        <main role="main" class="wrapper style1 lightEdition">
             <div class="container">
                 <div class="row gtr-200">
                     <div class="col-8 col-12-mobile" id="content">
@@ -176,15 +175,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
         <!-- Footer -->
-        <footer id="footer">
+        <footer role="contentinfo" id="footer">
             <div class="container">
-
                 <div class="row">
                     <div class="col-12">
-
                         <!-- Contact -->
                         <section class="contact">
                             <header>
@@ -194,20 +191,18 @@
                                 or shoot us a message on one of our <a href="https://tiosocialmedia.carrd.co/"
                                     target="_blank">social media pages</a>.</p>
                             <ul class="icons">
-                                <li><a href="https://www.youtube.com/IntermissionOrchestraatUCSD" target="_blank"
-                                        class="icon fa-youtube-play"><span class="label">Youtube</span></a></li>
-                                <li><a href="https://www.facebook.com/IntermissionUCSD" target="_blank"
-                                        class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                <li><a href="https://www.instagram.com/TIOatUCSD" target="_blank"
-                                        class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="https://www.twitch.tv/IntermissionUCSD" target="_blank"
-                                        class="icon fa-twitch"><span class="label">Twitch</span></a></li>
-                                <li><a href="https://twitter.com/TIOatUCSD" target="_blank"
-                                        class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-
+                                <li><a href="https://www.youtube.com/IntermissionOrchestraatUCSD" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/IntermissionUCSD" target="_blank"><i
+                                            class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/TIOatUCSD" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.twitch.tv/IntermissionUCSD" target="_blank"><i
+                                            class="fa-brands fa-twitch"></i></a></li>
+                                <li><a href="https://twitter.com/TIOatUCSD" target="_blank"><i
+                                            class="fa-brands fa-twitter"></i></a></li>
                             </ul>
                         </section>
-
                         <!-- Copyright -->
                         <div class="copyright">
                             &copy;
@@ -216,14 +211,11 @@
                             </span>
                             The Intermission Orchestra at UC San Diego.
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </footer>
-
-    </div>
+    </div> <!-- End of page wrapper -->
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
