@@ -5,11 +5,23 @@
 <html lang="en" dir="ltr" data-theme="light">
 
 <head>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXFW5Z53DW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PXFW5Z53DW');
+    </script>
+
+    <!-- TIO metadata -->
     <title>Gallery | Intermission Orchestra at UC San Diego</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#272727" />
+    <meta name="description" content="The Intermission Orchestra is a student-run organization dedicated to playing music from video games, anime, and films. We hold concerts at the end of every quarter and perform at events such as the Triton Gaming Expo, Winter GameFest, and Animefest.">
+    <meta name="keywords" content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
     <script>
         const colorMode = () => {
             // if localStorage preference exists
@@ -27,16 +39,11 @@
         // set theme based on colorMode()
         document.documentElement.setAttribute('data-theme', colorMode());
     </script>
+    <link rel="icon" href="./images/TIO_profile2-1-circle.png">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <noscript>
         <link rel="stylesheet" href="./assets/css/noscript.css" />
     </noscript>
-
-    <meta name="description"
-        content="The Intermission Orchestra is a student-run organization dedicated to playing music from video games, anime, and films. We hold concerts at the end of every quarter and perform at events such as the Triton Gaming Expo, Winter GameFest, and Animefest.">
-    <meta name="keywords"
-        content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
-    <link rel="icon" href="./images/TIO_profile2-1-circle.png">
     <script defer src="https://kit.fontawesome.com/762f049bb9.js" crossorigin="anonymous"></script>
 </head>
 
@@ -55,6 +62,7 @@
             </div>
             <!-- Nav -->
             <nav role="navigation" id="nav">
+                <a href="./"><img id="nav-logo" src="./images/logo-light.png" alt="Intermission Orchestra logo"></a>
                 <ul>
                     <li><a href="./">Home</a></li>
                     <li><a href="./about.html">About</a></li>
@@ -562,6 +570,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- GTranslate widget -->
+                <div class="gtranslate_wrapper" style="color: #61a09a;"></div>
+                <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"languages":["en","zh-CN","zh-TW","ja","ko","id","th","tl","vi","de","fr","pt","es","ru"],"wrapper_selector":".gtranslate_wrapper","horizontal_position":"left","vertical_position":"bottom","flag_style":"3d","alt_flags":{"en":"usa"}}</script>
+                <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
             </div>
         </footer>
     </div> <!-- End of page wrapper -->

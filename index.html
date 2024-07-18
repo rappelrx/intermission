@@ -5,11 +5,24 @@
 <html lang="en" dir="ltr" data-theme="light">
 
 <head>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXFW5Z53DW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PXFW5Z53DW');
+    </script>
+
+    <!-- TIO metadata -->
     <title>The Intermission Orchestra at UC San Diego</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#272727" />
+    <meta name="description" content="The Intermission Orchestra is a student-run organization dedicated to playing music from video games, anime, and films. We hold concerts at the end of every quarter and perform at events such as the Triton Gaming Expo, Winter GameFest, and Animefest.">
+    <meta name="keywords" content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
+    <meta name="google-site-verification" content="DnBSSuQPAfLCbP1mwSXYtu-etNUWe_JFHXwRZbDJPTU" />
     <script>
         const colorMode = () => {
             // if localStorage preference exists
@@ -27,22 +40,14 @@
         // set theme based on colorMode()
         document.documentElement.setAttribute('data-theme', colorMode());
     </script>
+    <link rel="canonical" href="./">
+    <link rel="icon" href="./images/TIO_profile2-1-circle.png" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <noscript>
         <link rel="stylesheet" href="./assets/css/noscript.css" />
     </noscript>
-
-    <meta name="description"
-        content="The Intermission Orchestra is a student-run organization dedicated to playing music from video games, anime, and films. We hold concerts at the end of every quarter and perform at events such as the Triton Gaming Expo, Winter GameFest, and Animefest.">
-    <meta name="keywords"
-        content="The Intermission Orchestra, The Intermission Orchestra at UCSD, Intermission Orchestra, Intermission Orchestra at UCSD, TIO, TIO at UCSD, TIOatUCSD, UC San Diego, University of California San Diego, UCSD, UCSD Music, Music, Video Games, Video Game Music, Anime, Anime Music, Films, Film Music, Video Game Orchestra, Game Music Orchestra, Anime Orchestra, Anime Music Orchestra, Film Music Orchestra, Student Organization, Student Org, Org, Music Org, Student Orchestra, Student-run Orchestra, Ensemble, Symphonic Orchestra, Music Club, Music Club UCSD, UCSD Organization">
-    <meta name="google-site-verification" content="DnBSSuQPAfLCbP1mwSXYtu-etNUWe_JFHXwRZbDJPTU" /> <!-- Rappel -->
-    <meta name="google-site-verification" content="PfAjVHk6HN_qTHk_VTc3fODd25pGvjcJCE9qBoO9whw" />
-    <link rel="canonical" href="./">
-    <link rel="icon" href="./images/TIO_profile2-1-circle.png">
     <script defer src="https://kit.fontawesome.com/762f049bb9.js" crossorigin="anonymous"></script>
 </head>
-
 
 <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -56,8 +61,6 @@
                                 alt="Logo of the Intermission Orchestra at UC San Diego"></a>
                     </h1>
                     <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
-                    <hr />
-                    <!-- <p style="font-style: italic">Music from video games, films, and anime</p> -->
                 </header>
                 <footer>
                     <a href="#banner" class="button circled scrolly"></a>
@@ -65,6 +68,7 @@
             </div>
             <!-- Nav -->
             <nav role="navigation" id="nav">
+                <a href="./"><img id="nav-logo" src="./images/logo-light.png" alt="Intermission Orchestra logo"></a>
                 <ul>
                     <li><a href="./" aria-current="page">Home</a></li>
                     <li><a href="./about.html">About</a></li>
@@ -246,18 +250,18 @@
 
             <div class="wrapper style2 lightEdition" id="about-section">
                 <article id="main" class="container special">
-                    <a href="#preview-about" class="image featured scrolly"><img id="banner2"
+                    <a href="#about" class="image featured scrolly"><img id="banner2"
                             src="./images/banner_black_transparent.png"
                             alt="The Intermission Orchestra's banner logo" /></a>
-                    <section id="preview-about" style="text-align: center">
-                        <header>
-                            <h2 style="padding-top: 0.3em;">The background music is now the feature.</h2>
+                    <section id="about">
+                        <header style="padding-top: 2em; text-align: center;">
+                            <h2>The background music is now the feature.</h2>
                             <p>
-                                In late 2015, four UCSD Music students banded together with a unifying idea: an ensemble
-                                dedicated to playing music from video games, anime, and films.
+                                <em>In late 2015, four UCSD Music students banded together with a unifying idea: an ensemble
+                                dedicated to playing music from video games, anime, and films.</em>
                             </p>
                         </header>
-                        <p style="text-align: left">
+                        <p>
                             That, along with the word "Intermission" in fancy font on a UCSD concert program, and The
                             Intermission Ensemble was born. After the first concert in Spring 2016, our initial small
                             ensemble
@@ -265,7 +269,7 @@
                             full symphonic orchestra that holds three concerts a year and performs at events such
                             as the Triton Gaming Expo, Winter GameFest, and Animefest.
                         </p>
-                        <p style="text-align: left">We hope to bring music from your favorite media to life, as well as
+                        <p>We hope to bring music from your favorite media to life, as well as
                             increase recognition for this genre of music.</p>
                     </section>
                     <footer>
@@ -310,6 +314,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- GTranslate widget -->
+                <div class="gtranslate_wrapper" style="color: #61a09a;"></div>
+                <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"languages":["en","zh-CN","zh-TW","ja","ko","id","th","tl","vi","de","fr","pt","es","ru"],"wrapper_selector":".gtranslate_wrapper","horizontal_position":"left","vertical_position":"bottom","flag_style":"3d","alt_flags":{"en":"usa"}}</script>
+                <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
             </div>
         </footer>
     </div> <!-- End of page wrapper -->
