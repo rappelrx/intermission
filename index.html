@@ -41,7 +41,10 @@
         document.documentElement.setAttribute('data-theme', colorMode());
     </script>
     <link rel="canonical" href="./">
-    <link rel="icon" href="./images/TIO_profile2-1-circle.png" />
+    <link rel="icon" href="./images/TIO_profile2-1-circle.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,400,400i,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,400,400i,600">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <noscript>
         <link rel="stylesheet" href="./assets/css/noscript.css" />
@@ -104,7 +107,7 @@
         </div>
 
         <!-- Post-banner -->
-        <section id="banner" class="lightEdition">
+        <section id="banner" class="light-edition">
             <header>
                 <h2>We are<br><strong>The Intermission Orchestra</strong><br>at UC San Diego.</h2>
                 <p>
@@ -117,7 +120,7 @@
         <section role="complementary" class="carousel">
             <div class="reel" id="carousel-section">
 
-                <article class="lightEdition">
+                <article class="light-edition">
                     <a href="#" class="image featured"><iframe loading="lazy" width="100%" height="220"
                             src="https://www.youtube-nocookie.com/embed/ENsUpsGRHm8" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -128,7 +131,7 @@
                     <p>IDOL<br>Winter 2024</p>
                 </article>
 
-                <article class="lightEdition">
+                <article class="light-edition">
                     <a href="#" class="image featured"><iframe loading="lazy" width="100%" height="220"
                             src="https://www.youtube-nocookie.com/embed/60sroTQGBgY" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -139,7 +142,7 @@
                     <p>Medley<br>Winter 2023</p>
                 </article>
 
-                <article class="lightEdition">
+                <article class="light-edition">
                     <a href="#" class="image featured"><iframe loading="lazy" width="100%" height="220"
                             src="https://www.youtube-nocookie.com/embed/Gp-Nf46LSj0" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -150,19 +153,18 @@
                     <p>Travelers / 14.3 Billion Years<br>Fall 2021</p>
                 </article>
 
-                <article class="lightEdition">
+                <article class="light-edition">
                     <a href="#" class="image featured"><iframe loading="lazy" width="100%" height="220"
                             src="https://www.youtube-nocookie.com/embed/jceUgX0sWgE" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe></a>
                     <header>
-                        <!-- h3 id="fitthis" -->
                         <h3><a href="https://www.youtube.com/watch?v=jceUgX0sWgE" target="_blank"><em>Hunter x Hunter</em></a></h3>
                     </header>
                     <p>World of Adventurers<br>Winter 2020</p>
                 </article>
 
-                <article class="lightEdition">
+                <article class="light-edition">
                     <a href="#" class="image featured"><iframe loading="lazy" width="100%" height="220"
                             src="https://www.youtube-nocookie.com/embed/GxrsAV1I7oo" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -173,7 +175,7 @@
                     <p>Medley<br>Spring 2019</p>
                 </article>
 
-                <article class="lightEdition">
+                <article class="light-edition">
                     <a href="#" class="image featured"><iframe loading="lazy" width="100%" height="220"
                             src="https://www.youtube-nocookie.com/embed/YwDg8NkJxBI" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -188,7 +190,7 @@
 
         <!-- Main -->
         <main role="main">
-            <div class="wrapper style2 lightEdition" id="main-section">
+            <div class="wrapper style2 light-edition" id="main-section">
                 <div class="container">
                     <article id="main" class="special">
                         <header>
@@ -220,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="wrapper style2 lightEdition" id="about-section">
+            <div class="wrapper style2 light-edition" id="about-section">
                 <article id="main" class="container special">
                     <a href="#about" class="image featured scrolly"><img id="banner2"
                             src="./images/banner_black_transparent.png"
@@ -302,11 +304,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollex/0.2.1/jquery.scrollex.min.js"
         integrity="sha512-eFxuATJvNeUrxxoS/5AeVi6X4wY6IdI9kAtRbuGyD2XTLoJ/R9uBce9lsf2UyvY0tQYlUkbs1wV9jhOPxANCzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/jquery.scrolly.min.js"></script>
+    <script src="./assets/js/browser.min.js"></script>
+    <script src="./assets/js/breakpoints.min.js"></script>
+    <script src="./assets/js/util.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script>
         var checkbox = $("#checkbox");
         var bannerLogo = $("#banner2");
