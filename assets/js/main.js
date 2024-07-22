@@ -38,9 +38,6 @@
     alignment: "center",
   });
 
-  // Scrolly.
-  $(".scrolly").scrolly();
-
   // Nav.
 
   // Button.

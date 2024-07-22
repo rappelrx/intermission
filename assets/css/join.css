@@ -1,0 +1,25 @@
+.join-fig {
+  text-align: center;
+}
+.join-fig .image {
+  width: 65%;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+.join-fig > figcaption {
+  color: var(--tio-white);
+  position: relative;
+  margin-top: -3em;
+  font-size: small;
+}
+.join-fig > figcaption {
+  text-shadow: -1px -1px 4px var(--tio-black), 1px -1px 4px var(--tio-black),
+    -1px 1px 4px var(--tio-black), 1px 1px 4px var(--tio-black),
+    -1px 0 4px var(--tio-black), 1px 0 4px var(--tio-black),
+    0 -1px 4px var(--tio-black), 0 1px 4px var(--tio-black);
+}
+@media screen and (max-width: 736px) {
+  .join-fig .image {
+    width: 100%;
+  }
+}

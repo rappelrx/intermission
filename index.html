@@ -46,6 +46,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,400,400i,600">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,400,400i,600">
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
     <noscript>
         <link rel="stylesheet" href="./assets/css/noscript.css" />
     </noscript>
@@ -310,6 +311,9 @@
     <script src="./assets/js/util.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
+        // Scrolly.
+        $(".scrolly").scrolly();
+        // Dark mode toggle.
         var checkbox = $("#checkbox");
         var bannerLogo = $("#banner2");
         if (document.documentElement.getAttribute('data-theme') === 'dark') {

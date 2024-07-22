@@ -45,17 +45,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,400,400i,600">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <style>
-        #clown-knight:hover {
-            animation: spin 2s infinite linear;
+        #clown-knight {
+            cursor: pointer;
+            animation: bounce 0.5s; 
+            animation-direction: alternate; 
+            animation-timing-function: cubic-bezier(.5, 0.05, 1, 1); 
+            animation-iteration-count: infinite;
         }
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
+        @keyframes bounce { 
+            from { 
+                transform: translate3d(0, 0, 0); 
+            } 
+            to { 
+                transform: translate3d(0, 30px, 0); 
+            } 
+        } 
     </style>
     <noscript>
         <link rel="stylesheet" href="./assets/css/noscript.css" />
@@ -120,7 +124,7 @@
                 <p>It seems this page is still waiting for its release, just like Silksong.</p>
             </header>
             <footer>
-                <img id="clown-knight" title="Clown Knight, by Kathleen Bai" src="https://cdn.discordapp.com/emojis/1108139678655316059.png?size=240&quality=lossless" alt="Hollow Knight clown" />
+                <img id="clown-knight" title="Clown Knight, by Kathleen Bai" src="./images/clown-knight.png" alt="Hollow Knight clown" />
             </footer>
         </main>
 
@@ -173,7 +177,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.dropotron/1.4.3/jquery.dropotron.min.js"
         integrity="sha512-ugEhUBPC3XfTEBbRia5d9er1tFe5N4yzwQr3xrNSTfmT09xe0fwYxgfDSLwUKCnFoFtLd5rJBZP5tdfcUzLNvw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/jquery.scrolly.min.js"></script>
     <script src="./assets/js/browser.min.js"></script>
     <script src="./assets/js/breakpoints.min.js"></script>
     <script src="./assets/js/util.js"></script>
