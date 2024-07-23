@@ -16,7 +16,7 @@ UCSD Server Site Link: https://intermission.ucsd.edu/
 - Improve accessibility
   - Follow ARIA standards
 
-**Technical Skills**: HTML/CSS, JavaScript, jQuery
+**Technical Skills**: HTML/CSS, JavaScript, jQuery, Sass
 
 Resources for web hosting:
 - https://support.ucsd.edu/its?id=kb_article_view&sys_kb_id=f4cd7f431b613810506f64e8624bcbf2
