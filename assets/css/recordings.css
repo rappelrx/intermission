@@ -11,7 +11,7 @@ summary {
   font-size: 1.3em;
   font-weight: bold;
   color: var(--tio-white);
-  background: var(--tanuki-cyan);
+  background: var(--accordion);
   cursor: pointer;
   position: relative;
   -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out,
@@ -25,9 +25,9 @@ summary {
   text-indent: 0px;
 }
 details:not([open]) summary:hover {
-    background: var(--tanuki-yellow);
+    background: var(--accordion-hover);
     box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
-    color: var(--tio-black)
+    color: var(--tio-black);
 }
 details:not([open]) summary:hover::before {
   background: conic-gradient(from 90deg at 26% 26%, #0000 90deg, var(--tio-black) 0) 100%
@@ -51,6 +51,7 @@ summary::before {
 details[open] {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 0px 10px;
     margin-bottom: 2em;
+    border: 0.5px solid var(--button);
 }
 details[open] summary::before {
   transform: rotate(45deg);
@@ -60,7 +61,7 @@ details[open] summary::before {
 details[open] summary {
     color: var(--theme-text);
   background: var(--theme-background);
-  border-bottom: 2px solid var(--tanuki-cyan);
+  border-bottom: 2px solid var(--theme-text);
   text-indent: 1rem;
 }
 .resp-container {
