@@ -30,7 +30,7 @@
 .carousel {
   position: relative;
   overflow: hidden;
-  padding: 2em 0 2em 0;
+  padding: 0;
   margin-bottom: 0;
 }
 .carousel .forward,
@@ -99,7 +99,7 @@
   white-space: nowrap;
   position: relative;
   -webkit-overflow-scrolling: touch;
-  padding: 0 2em 0 2em;
+  padding: 2em;
 }
 .carousel article {
   display: inline-block;
@@ -132,10 +132,10 @@
 }
 @media screen and (max-width: 1680px) {
   .carousel {
-    padding: 1.5em 0 1.5em 0;
+    padding: 0;
   }
   .carousel .reel {
-    padding: 0 1.5em 0 1.5em;
+    padding: 1.5em;
   }
   .carousel article {
     width: 18em;
@@ -144,7 +144,7 @@
 }
 @media screen and (max-width: 840px) {
   .carousel {
-    padding: 1.25em 0 1.25em 0;
+    padding: 0;
   }
   .carousel article {
     width: 18em;
@@ -153,10 +153,10 @@
 }
 @media screen and (max-width: 736px) {
   .carousel {
-    padding: 1em 0 1em 0;
+    padding: 0;
   }
   .carousel .reel {
-    padding: 0 1em 0 1em;
+    padding: 1em;
   }
   .carousel article {
     width: 18em;
