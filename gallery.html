@@ -71,19 +71,7 @@
                     <li><a href="./">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./upcoming.html">Upcoming</a></li>
-                    <li>
-                        <a href="./recordings.html">Recordings</a>
-                        <!--<ul style="text-align: center">
-                            <li><a href="./recordings.html#20232024">2023 – 2024</a></li>
-                            <li><a href="./recordings.html#20222023">2022 – 2023</a></li>
-                            <li><a href="./recordings.html#20212022">2021 – 2022</a></li>
-                            <li><a href="./recordings.html#20202021">2020 – 2021</a></li>
-                            <li><a href="./recordings.html#20192020">2019 – 2020</a></li>
-                            <li><a href="./recordings.html#20182019">2018 – 2019</a></li>
-                            <li><a href="./recordings.html#20172018">2017 – 2018</a></li>
-                            <li><a href="./recordings.html#20162017">2016 – 2017</a></li>
-                        </ul>-->
-                    </li>
+                    <li><a href="./recordings.html">Recordings</a></li>
                     <li><a href="./gallery.html" aria-current="page">Gallery</a></li>
                     <li><a href="./join.html">Join</a></li>
                 </ul>
@@ -104,12 +92,18 @@
         <!-- Main -->
         <main role="main" id="main" class="wrapper style2 light-edition">
             <div class="container">
-                <article class="special">
+                <article id="main-gallery" class="special">
                     <header>
                         <h2>Gallery</h2>
                         <p>Archives of our quarterly concerts.</p>
+                        <div class="pagination">
+                            <p class="prev" onclick="changePage(-1)"><i class="fa-solid fa-caret-left"></i></p>
+                            <span id="page-info"></span>
+                            <p class="next" onclick="changePage(1)"><i class="fa-solid fa-caret-right"></i></p>
+                        </div>
                     </header>
-                    <div class="row" style="padding-top: .5em">
+                    
+                    <div id="gallery-container" class="row" style="padding-top: .5em">
                         <article class="col-4 col-12-mobile special"><a
                                 href="https://photos.app.goo.gl/cBz1JjeS4GNf5psx8"
                                 target="_blank">
@@ -476,57 +470,9 @@
                         </article>
                     </div>
                     <hr>
-                    <h3>Programs</h3>
-                    <div class="row" style="margin-top: .5em">
-                        <!--<article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/4at8qKx87m7hX4qh9"
-                                target="_blank">
-                                <div class="gallery">
-                                    <picture>
-                                        <source srcset="./images/gallery_artcommittee.webp" type="image/webp" />
-                                        <img src="./images/gallery_artcommittee.jpg" class="gallery image"
-                                            alt="Art Committee Gallery">
-                                    </picture>
-                                    <div class="gallery overlay">
-                                        <div class="gallery text">
-                                            <p style="text-align: center">Art Committee</p>
-                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>-->
-                        <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/qbobWezRNaawdFoGA"
-                                target="_blank">
-                                <div class="gallery">
-                                    <img loading="lazy" src="./images/gallery_programs.png" class="gallery image"
-                                        alt="Concert Programs Gallery">
-                                    <div class="gallery overlay">
-                                        <div class="gallery text">
-                                            <p style="text-align: center">Concert Programs</p>
-                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="col-4 col-12-mobile special"><a href="https://photos.app.goo.gl/8kUZE16QCzjKBGjx8"
-                                target="_blank">
-                                <div class="gallery">
-                                    <picture>
-                                        <source srcset="./images/gallery_banners.webp" type="image/webp" />
-                                        <img loading="lazy" src="./images/gallery_banners.png" class="gallery"
-                                            alt="Concert Banners Gallery">
-                                    </picture>
-                                    <div class="gallery overlay">
-                                        <div class="gallery text">
-                                            <p style="text-align: center">Concert Banners</p>
-                                            <p style="text-align: center"><i class="fa-regular fa-images"></i></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
+                    <footer>
+                        <p><a href="https://photos.app.goo.gl/qbobWezRNaawdFoGA" target="_blank" class="button">Concert Programs &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a></p>
+                    </footer>
                 </article>
             </div>
         </main>
@@ -584,6 +530,14 @@
     <script src="./assets/js/breakpoints.min.js"></script>
     <script src="./assets/js/util.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script>
+        // dependent on pagination.js
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrid();
+            updatePaginationInfo();
+        });
+    </script>
     <script>
         var checkbox = $("#checkbox");
         var bannerLogo = $("#banner2");

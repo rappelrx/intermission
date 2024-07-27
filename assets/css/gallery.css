@@ -45,3 +45,46 @@
   line-height: 0;
   top: 40%;
 }
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination > .prev,
+.pagination > .next {
+  width: 6em;
+  cursor: pointer;
+}
+.pagination > .prev:hover {
+  color: var(--button-hover);
+  animation: x-left 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 1);
+  animation-iteration-count: infinite;
+}
+@keyframes x-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-8px, 0, 0);
+  }
+}
+.pagination > .next:hover {
+  color: var(--button-hover);
+  animation: x-right 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 1);
+  animation-iteration-count: infinite;
+}
+@keyframes x-right {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(8px, 0, 0);
+  }
+}
+.pagination > * {
+  white-space: nowrap;
+}
