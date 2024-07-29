@@ -1,3 +1,10 @@
+/*!
+* Copyright (c) 2024, The Intermission Orchestra at UC San Diego.
+*
+* recordings.css is styling specific to /recordings.html page.
+* If you make changes to this file, please run the command `npm run build:css`
+* in your terminal to update the respective minified .css file in /dist.
+*/
 details {
   padding-bottom: 1em;
 }
@@ -14,15 +21,9 @@ summary {
   background: var(--accordion);
   cursor: pointer;
   position: relative;
-  -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out,
-    border-bottom-color 0.35s ease-in-out;
-  -webkit-transition: background-color 0.35s ease-in-out,
-    color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-  -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out,
-    border-bottom-color 0.35s ease-in-out;
   transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out,
     border-bottom-color 0.35s ease-in-out;
-  text-indent: 0px;
+  text-indent: 0;
 }
 details:not([open]) summary:hover {
   background: var(--accordion-hover);
@@ -49,19 +50,18 @@ summary::before {
   inset: 0.75rem;
   left: auto;
   aspect-ratio: 1;
-  /* creates x shape */
   background: conic-gradient(
       from 90deg at 26% 26%,
       #0000 90deg,
       var(--tio-white) 0
     )
     100% 100%/58% 58%;
+  -webkit-clip-path: inset(1px);
   clip-path: inset(1px);
   transition: 0.3s;
 }
 details[open] {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 0 10px;
   margin-bottom: 2em;
   border: 0.5px solid var(--button);
 }
@@ -113,6 +113,7 @@ details h4 {
 }
 #tio-noface > img:hover {
   cursor: pointer;
+  -webkit-animation: rotation 1.5s infinite linear;
   animation: rotation 1.5s infinite linear;
 }
 #tio-noface > figcaption {
@@ -161,7 +162,8 @@ details h4 {
     position: sticky;
     top: 6em;
   }
-  .button, #tio-noface {
+  .button,
+  #tio-noface {
     width: 90%;
   }
   #tio-noface > img {

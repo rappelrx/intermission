@@ -1,3 +1,10 @@
+/*!
+* Copyright (c) 2024, The Intermission Orchestra at UC San Diego.
+*
+* join.css is styling specific to /join.html page.
+* If you make changes to this file, please run the command `npm run build:css`
+* in your terminal to update the respective minified .css file in /dist.
+*/
 .join-fig {
   text-align: center;
 }
@@ -35,6 +42,7 @@
 }
 #saxolotl > img:hover {
   cursor: pointer;
+  -webkit-animation: rotation 1.5s infinite linear;
   animation: rotation 1.5s infinite linear;
 }
 #saxolotl > figcaption {

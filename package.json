@@ -1,0 +1,15 @@
+{
+  "name": "tioatucsd",
+  "version": "1.0.0",
+  "description": "The Intermission Orchestra at UC San Diego Official Website",
+  "scripts": {
+    "build:css": "postcss assets/css/main.css -o dist/css/main.min.css && postcss assets/css/home.css -o dist/css/home.min.css && postcss assets/css/about.css -o dist/css/about.min.css && postcss assets/css/recordings.css -o dist/css/recordings.min.css && postcss assets/css/gallery.css -o dist/css/gallery.min.css && postcss assets/css/join.css -o dist/css/join.min.css"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.4",
+    "postcss": "^8.4.40",
+    "postcss-cli": "^11.0.0"
+  }
+}

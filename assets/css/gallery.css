@@ -1,3 +1,10 @@
+/*!
+* Copyright (c) 2024, The Intermission Orchestra at UC San Diego.
+*
+* gallery.css is styling specific to /gallery.html page.
+* If you make changes to this file, please run the command `npm run build:css`
+* in your terminal to update the respective minified .css file in /dist.
+*/
 .gallery {
   position: relative;
   max-width: 320px;
@@ -45,7 +52,6 @@
   line-height: 0;
   top: 40%;
 }
-/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
@@ -57,10 +63,22 @@
 }
 .pagination > .prev:hover {
   color: var(--button-hover);
+  -webkit-animation: x-left 0.5s;
   animation: x-left 0.5s;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.05, 1, 1);
   animation-timing-function: cubic-bezier(0.5, 0.05, 1, 1);
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+@-webkit-keyframes x-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-8px, 0, 0);
+  }
 }
 @keyframes x-left {
   from {
@@ -72,10 +90,22 @@
 }
 .pagination > .next:hover {
   color: var(--button-hover);
+  -webkit-animation: x-right 0.5s;
   animation: x-right 0.5s;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.05, 1, 1);
   animation-timing-function: cubic-bezier(0.5, 0.05, 1, 1);
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+@-webkit-keyframes x-right {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(8px, 0, 0);
+  }
 }
 @keyframes x-right {
   from {
